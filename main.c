@@ -20,10 +20,10 @@ int main(void){
 	scanf("%f",&salbase);
 	
 	if(salbase<954.00){
-		printf("salario invalido menor que R$ 788.00\n\n");
+		printf("salario invalido menor que R$ 954.00\n\n");
 		printf("Por favor corrija! \n\n");
 	}
-	else if(salbase>954.00){
+	else if(salbase>=954.00){
 		printf("Digite a quantidade de passagem que gasta para ir ao trabalho \n");
 		scanf("%d",&ida);
 		printf("Digite a quantidade de passagem que gasta para voltar para casa \n");
@@ -73,8 +73,9 @@ int main(void){
 				printf("\t""INSS..................................................R$%.2f \n\n",dinss);
 				printf("\t""Salario bruto........R$%.2f   Salario liquido......R$%.2f\n\n",salbruto,salliq);
 			
+				} 
 				
-				}
+				
 				}	
 			else if(b=='n'||b=='N'){
 				printf("Quantas passagens sao do tipo A \n");
@@ -89,8 +90,7 @@ int main(void){
 				dinss=salbruto*0.08;//desconto do INSS
 				salliq=salbruto-dvt-dinss;// salario liquido
 		
-		
-				printf("\t\t\t\t""CONTRA CHEQUE \n\n");
+                                printf("\t\t\t\t""CONTRA CHEQUE \n\n");
 				printf("\t""Proventos \n");
 				printf("\t""Salario base..........................................R$%.2f \n",salbase);
 				printf("\t""Vale transporte.......................................R$%.2f\n\n",somam);
@@ -99,7 +99,8 @@ int main(void){
 				printf("\t""INSS..................................................R$%.2f \n\n",dinss);
 				printf("\t""Salario bruto........R$%.2f   Salario liquido......R$%.2f\n\n",salbruto,salliq);
 			
-				}
+				} 
+				
 	
 		
 		}
