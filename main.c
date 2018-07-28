@@ -11,6 +11,18 @@
 #define valea 3.20
 #define valeb 4.40
 
+float Imprimir(float salbase,float salliq,float dvt,float dinss,float somam,float salbruto ){
+     printf("\t\t\t\t""CONTRA CHEQUE \n\n");
+				printf("\t""Proventos \n");
+				printf("\t""Salario base..........................................R$%.2f \n",salbase);
+				printf("\t""Vale transporte.......................................R$%.2f\n\n",somam);
+				printf("\t""Descontos \n");
+				printf("\t""Vale transporte.......................................R$%.2f\n",dvt);
+				printf("\t""INSS..................................................R$%.2f \n\n",dinss);
+				printf("\t""Salario bruto........R$%.2f   Salario liquido......R$%.2f\n\n",salbruto,salliq);
+}
+
+
 int main(void){
 	int ida,volta,dias,n,m,somaq;
 	char a,b;
@@ -62,16 +74,9 @@ int main(void){
 				dvt=salbase*0.06;//desconto das passagens
 				dinss=salbruto*0.08;//desconto do INSS
 				salliq=salbruto-dvt-dinss;// salario liquido
+		                
+                                Imprimir(salbase,salliq,dvt,dinss,somam,salbruto );
 		
-		
-				printf("\t\t\t\t""CONTRA CHEQUE \n\n");
-				printf("\t""Proventos \n");
-				printf("\t""Salario base..........................................R$%.2f \n",salbase);
-				printf("\t""Vale transporte.......................................R$%.2f\n\n",somam);
-				printf("\t""Descontos \n");
-				printf("\t""Vale transporte.......................................R$%.2f\n",dvt);
-				printf("\t""INSS..................................................R$%.2f \n\n",dinss);
-				printf("\t""Salario bruto........R$%.2f   Salario liquido......R$%.2f\n\n",salbruto,salliq);
 			
 				} 
 				
@@ -90,18 +95,9 @@ int main(void){
 				dinss=salbruto*0.08;//desconto do INSS
 				salliq=salbruto-dvt-dinss;// salario liquido
 		
-                                printf("\t\t\t\t""CONTRA CHEQUE \n\n");
-				printf("\t""Proventos \n");
-				printf("\t""Salario base..........................................R$%.2f \n",salbase);
-				printf("\t""Vale transporte.......................................R$%.2f\n\n",somam);
-				printf("\t""Descontos \n");
-				printf("\t""Vale transporte.......................................R$%.2f\n",dvt);
-				printf("\t""INSS..................................................R$%.2f \n\n",dinss);
-				printf("\t""Salario bruto........R$%.2f   Salario liquido......R$%.2f\n\n",salbruto,salliq);
-			
-				} 
+                               Imprimir(salbase,salliq,dvt,dinss,somam,salbruto );
 				
-	
+                        }
 		
 		}
 	}	
